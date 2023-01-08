@@ -81,7 +81,7 @@ main {
 }
 
 /*-----------------------------------*\
-  #REUSED STYLE
+  #RATING
 \*-----------------------------------*/
 .card {
     max-width: 40rem;
@@ -89,6 +89,7 @@ main {
     padding: 2.4rem;
     background-color: var(--dark-blue-color);
     border-radius: 1.5rem;
+    display: block;
 }
 
 .btn {
@@ -118,6 +119,7 @@ main {
     display: block;
     margin-bottom: 3.5rem;
     font-size: inherit;
+    line-height: 2.3rem;
 }
 
 .card__numbers {
@@ -131,6 +133,11 @@ main {
     transition: 0.2s;
 }
 
+.btn--number.active {
+    background-color: var(--first-color);
+    color: var(--white-color);
+}
+
 .btn--number:hover {    
     background-color: var(--light-gray-color);
     color: var(--white-color);
@@ -138,6 +145,7 @@ main {
 
 .btn--number:active {
     background-color: var(--first-color);
+    color: var(--white-color);
 }
 /* .number span {
     display: flex;
@@ -161,5 +169,47 @@ main {
     transform: translate(2px, 2px);
 }
 
+/*-----------------------------------*\
+  #THANK-YOU
+\*-----------------------------------*/
+.card--thank {
+    display: none;
+    text-align: center;
+}
+
+#show {
+    display: block;
+}
+
+.card__img {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.card__number-selected {
+    display: inline-flex;
+    width: auto;
+    height: 4rem;
+    padding-inline: 1.5rem;
+    color: var(--first-color);
+    margin-bottom: 3.5rem;
+    cursor: default;
+    letter-spacing: 0.15rem;
+}
+
+#number-selected {
+    width: 2rem;
+}
+
+
+/* .hide {
+    display: none;
+}
+
+.show {
+    display: block;
+} */
 /*fazer hover e active anates de ir para o js
 duvidas, como separar a transição de hover do active de cada elemento? Como centralizar verticalmente os conteúdos dos botoes, pois não está totalmente alinhados.*/

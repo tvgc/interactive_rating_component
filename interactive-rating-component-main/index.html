@@ -20,7 +20,7 @@
   <main>
 
     <!-- Rating state start -->
-    <div class="card">
+    <div class="card main-card" id="main-card">
 
       <span class="card__star btn">
           <img src="images/icon-star.svg" alt="star">
@@ -33,11 +33,11 @@
       </small>
 
       <ul class="card__numbers">
-        <li class="card__number btn btn--number"><span>1</span></li>
-        <li class="card__number btn btn--number"><span>2</span></li>
-        <li class="card__number btn btn--number"><span>3</span></li>
-        <li class="card__number btn btn--number"><span>4</span></li>
-        <li class="card__number btn btn--number"><span>5</span></li>
+        <li class="card__number btn btn--number" data-number="1">1</li>
+        <li class="card__number btn btn--number" data-number="2">2</li>
+        <li class="card__number btn btn--number" data-number="3">3</li>
+        <li class="card__number btn btn--number" data-number="4">4</li>
+        <li class="card__number btn btn--number" data-number="5">5</li>
       </ul>
 
       <input type="button" value="Submit" class="btn btn--submit">
@@ -45,28 +45,30 @@
     </div>
     <!-- Rating state end -->
 
+    <!-- Thank you state start -->
+  
+    <div class="card card--thank" id="second-card">
+      <span class="card__img">
+        <img src="images/illustration-thank-you.svg" alt="">
+      </span>
+      <p class="card__number-selected btn">
+        You selected <span id="number-selected"></span> out of 5
+      </p>
+      <h2 class="card__title">Thank you!</h2>
+      <small class="card__desc">
+        We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!
+      </small>
+    </div>
+  
+    <!-- Thank you state end -->
+
   </main>
-
-
-  
-
-  
-
-  <!-- Thank you state start -->
-
-  <div style="display: none;">
-    You selected <!-- Add rating here --> out of 5
-    Thank you!
-    We appreciate you taking the time to give a rating. If you ever need more support,
-    don’t hesitate to get in touch!
-  </div>
-
-  <!-- Thank you state end -->
-
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script src="styles/js/main.js"></script>
 </body>
 </html>
