@@ -1,0 +1,165 @@
+/*-----------------------------------*\
+  #FONTS
+\*-----------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+/*-----------------------------------*\
+  #VARIABLES
+\*-----------------------------------*/
+:root {
+    /*colors*/
+    --first-color: hsl(25, 97%, 53%);
+    --white-color: hsl(0, 0%, 100%);
+    --light-gray-color: hsl(217, 12%, 63%);
+    --medium-gray-color: hsl(216, 12%, 54%);
+    --dark-blue-color: hsl(213, 19%, 18%);
+    --very-dark-blue-color: hsl(216, 12%, 8%);
+
+    /*typography*/
+    --body-font-family: 'Overpass', sans-serif;
+}
+
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li { list-style: none; }
+
+/* a,
+img,
+span,
+input,
+button,
+ion-icon { display: block; } */
+
+a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+ input,
+ button {
+    background: none;
+    border: none;
+    font: inherit;
+}
+
+input { width: 100%; }
+
+button { cursor: pointer; }
+
+img {
+    max-width: 100%; 
+    height: auto;
+}
+
+html {
+    font-family: var(--body-font-family);
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.5rem;
+    height: 100vh;
+    color: var(--medium-gray-color);
+}
+
+main {
+    background-color: var(--very-dark-blue-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 1.4rem);
+}
+
+/*-----------------------------------*\
+  #REUSED STYLE
+\*-----------------------------------*/
+.card {
+    max-width: 40rem;
+    margin-inline: 2.4rem;
+    padding: 2.4rem;
+    background-color: var(--dark-blue-color);
+    border-radius: 1.5rem;
+}
+
+.btn {
+    border-radius: 5rem;
+    background-color: hsl(213deg 19% 26%);
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.card__star {
+    margin-bottom: 3.5rem;
+    cursor: default;
+}
+
+.card__title {
+    margin-bottom: 2.5rem;
+    color: var(--white-color);
+    font-weight: 500;
+    font-size: 2.75rem;
+}
+
+.card__desc {
+    display: block;
+    margin-bottom: 3.5rem;
+    font-size: inherit;
+}
+
+.card__numbers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 3.5rem;
+}
+
+.btn--number {
+    transition: 0.2s;
+}
+
+.btn--number:hover {    
+    background-color: var(--light-gray-color);
+    color: var(--white-color);
+}
+
+.btn--number:active {
+    background-color: var(--first-color);
+}
+/* .number span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.btn--submit {
+    width: 100%;
+    text-transform: uppercase;
+    color: var(--white-color);
+    letter-spacing: 0.35rem;
+    font-weight: 700;
+    background-color: var(--first-color);
+    transition: 0.2s;
+}
+
+.btn--submit:active {
+    background-color: var(--white-color);
+    color: var(--first-color);
+    transform: translate(2px, 2px);
+}
+
+/*fazer hover e active anates de ir para o js
+duvidas, como separar a transição de hover do active de cada elemento? Como centralizar verticalmente os conteúdos dos botoes, pois não está totalmente alinhados.*/
